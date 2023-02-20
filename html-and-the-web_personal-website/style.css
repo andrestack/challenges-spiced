@@ -9,8 +9,14 @@ nav {
   background-color: violet;
   border-radius: 10px;
   font-size: 32px;
+  display: flex;
+  justify-content: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: ;
+}
 img {
   width: 250px;
   border: solid 5px black;
@@ -18,4 +24,20 @@ img {
   border-radius: 10px;
 }
 
-.hello;
+.hello h2 {
+  text-align: center;
+}
+
+.hello p {
+  border: solid 2px black;
+  padding: 5;
+  margin-left: px;
+  border-radius: 10px;
+}
+
+.socials a {
+  border: solid 2px black;
+  padding: 5;
+  margin-left: px;
+  border-radius: 10px;
+}
