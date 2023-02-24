@@ -10,6 +10,11 @@ console.clear();
 
 // --v-- write your code here --v--
 
+let bookTitle = "The Beach"
+let author = "Alex Garland"
+let rating = 5
+let soldCopies = 1000
+
 // --^-- write your code here --^--
 
 /*
@@ -25,6 +30,12 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+console.log(bookTitle);
+console.log(author);
+console.log(++rating);
+console.log(soldCopies + 1000);
+
+
 
 // --^-- write your code here --^--
 
@@ -37,5 +48,15 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+function logBookData () {
+console.log(bookTitle);
+console.log(author);
+console.log(++rating);
+console.log(++soldCopies)
+}
+
+logBookData()
+console.log(++soldCopies)
+console.log(soldCopies + 1000)
 
 // --^-- write your code here --^--
