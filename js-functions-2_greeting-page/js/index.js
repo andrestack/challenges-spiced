@@ -20,13 +20,30 @@ Change the contents of this page depending on the current day and time.
 */
 
 const display = document.querySelector('[data-js="display"]');
+const time = new Date().getHours();
+const day = new Date().getDay();
+
 
 function getGreeting() {
-  // Code here
+  if (time >= 6 && time < 12){
+    return "Good Morning"
+  }else if (time >= 13 && time < 18) {
+    return "Good Afternoon"
+  } else if (time >= 19 && time < 22) {
+    return "Good Evening"
+    }else{
+      return "Good Night"
+    } 
 }
 
 function getDayColor() {
-  // Code here
+  if (day === 1) {
+    return "darkgray"
+  }else if (day < 6){
+return "lightblue"
+  }else{
+    return "hotpink"
+  }
 }
 
 display.textContent = getGreeting();
