@@ -11,6 +11,7 @@ They should return the result of the respective calculation:
 */
 
 function add(a, b) {
+  return a+b;
   // Code here
 }
 
