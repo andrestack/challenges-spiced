@@ -21,6 +21,8 @@ body {
   border: none;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: ease-in-out 1s;
+
 }
 
 .start-button:hover {
@@ -28,6 +30,8 @@ body {
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+
 }
 
 .start-button:disabled {
@@ -49,8 +53,7 @@ body {
   background: rgb(71, 212, 94);
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-  transition: transform 0.5s;
+transition: transform 0.5s;
 }
 
 .toast--hidden {
@@ -75,4 +78,32 @@ body {
   opacity: 0.8;
   width: 0%;
   transition: width linear 2000ms;
+  animation: greenToast ease-in 2s;
+  
+}
+
+@keyframes greenToast {
+  0% {
+    transform: translateX(0);
+  }
+
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
 }
