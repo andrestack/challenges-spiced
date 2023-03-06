@@ -35,18 +35,34 @@ const recipes = [
  1: `map` exercises
 */
 
-const onlyTitles = null; // ['Crepes', ...]
+const onlyTitles = recipes.map((recipe) => {
+  // console.log(recipe.title);
 
-const titlesWithDuration = null; // ['Crepes (60min)', ...]
+}); // ['Crepes', ...]
 
-const timePerServing = null; // [20, 10, 432, 12]
+const titlesWithDuration = recipes.map((recipe)=> {
+return (`${recipe.title} ${recipe.duration} min`)
+}); 
 
+
+// ['Crepes (60min)', ...]
+
+const timePerServing = recipes.map((recipe)=> {
+  return recipe.duration / recipe.servings;
+}); // [20, 10, 432, 12]
 // EXTRA:
 
 // HINT: use first map() and then Array.prototype.join() with "method chaining" like so:
 // myArray.map(...).join(', ');
 
-const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
+const allTitlesInOneString = recipes.map(recipe => recipe.title).join(', ');
+
+console.log(allTitlesInOneString);
+
+
+  
+
+// 'Crepes, Scrambled Eggs, ...'
 
 // For more information how to join an array,
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join#joining_an_array_four_different_ways
