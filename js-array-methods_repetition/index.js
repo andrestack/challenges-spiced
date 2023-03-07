@@ -57,7 +57,7 @@ const timePerServing = recipes.map((recipe)=> {
 
 const allTitlesInOneString = recipes.map(recipe => recipe.title).join(', ');
 
-console.log(allTitlesInOneString);
+
 
 
   
@@ -71,9 +71,15 @@ console.log(allTitlesInOneString);
  2: `filter` exercises
 */
 
-const recipesThatOnlyTake60minutesOrLess = null;
+const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) =>
+{return recipe.duration <= 60});
 
-const allRecipesWithMoreThan2Servings = null;
+
+const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => {
+  return recipe.servings > 2
+});
+
+console.log(allRecipesWithMoreThan2Servings);
 
 const allRecipesWithTitlesLongerThan12Characters = null;
 
