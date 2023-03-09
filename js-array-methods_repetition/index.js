@@ -74,7 +74,12 @@ const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => {
 
 console.log(allRecipesWithMoreThan2Servings);
 
-const allRecipesWithTitlesLongerThan12Characters = null;
+const allRecipesWithTitlesLongerThan12Characters = recipes.map((recipe) => recipe.title).filter((recipe) => {
+  return recipe.length > 12;
+}) 
+
+
+console.log(allRecipesWithTitlesLongerThan12Characters);
 
 export {
   onlyTitles,
