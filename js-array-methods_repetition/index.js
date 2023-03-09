@@ -37,17 +37,15 @@ const recipes = [
 
 const onlyTitles = recipes.map((recipe) => {
   // console.log(recipe.title);
-
 }); // ['Crepes', ...]
 
-const titlesWithDuration = recipes.map((recipe)=> {
-return (`${recipe.title} ${recipe.duration} min`)
-}); 
-
+const titlesWithDuration = recipes.map((recipe) => {
+  return `${recipe.title} ${recipe.duration} min`;
+});
 
 // ['Crepes (60min)', ...]
 
-const timePerServing = recipes.map((recipe)=> {
+const timePerServing = recipes.map((recipe) => {
   return recipe.duration / recipe.servings;
 }); // [20, 10, 432, 12]
 // EXTRA:
@@ -55,12 +53,7 @@ const timePerServing = recipes.map((recipe)=> {
 // HINT: use first map() and then Array.prototype.join() with "method chaining" like so:
 // myArray.map(...).join(', ');
 
-const allTitlesInOneString = recipes.map(recipe => recipe.title).join(', ');
-
-
-
-
-  
+const allTitlesInOneString = recipes.map((recipe) => recipe.title).join(", ");
 
 // 'Crepes, Scrambled Eggs, ...'
 
@@ -71,12 +64,12 @@ const allTitlesInOneString = recipes.map(recipe => recipe.title).join(', ');
  2: `filter` exercises
 */
 
-const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) =>
-{return recipe.duration <= 60});
-
+const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) => {
+  return recipe.duration <= 60;
+});
 
 const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => {
-  return recipe.servings > 2
+  return recipe.servings > 2;
 });
 
 console.log(allRecipesWithMoreThan2Servings);
