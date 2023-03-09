@@ -15,34 +15,13 @@ let pizzaSize1 = +pizzaInput1.value
  let pizzaSize2 = +pizzaInput2.value
  calculatePizzaGain(pizzaSize1,pizzaSize2)
 
-}
-
-Now in both eventlisteners you could change the paramenters:
-
-pizzaInput1.addEventListener("input", updatedGain);
-
-or
-
-pizzaInput1.addEventListener("input", () => {
-  updatedGain()
-
-}
+}*/
 
 
- */
-
-
-pizzaInput1.addEventListener("input", () => {
- let pizzaSize1 = +pizzaInput1.value
- let pizzaSize2 = +pizzaInput2.value
- calculatePizzaGain(pizzaSize1,pizzaSize2)
- updatePizzaDisplay(pizza1, pizzaInput1.value)
- updateOutputColor(pizzaSize1,pizzaSize2)
  
 
  
-  
-  // write your code here
+
 });
 
 pizzaInput2.addEventListener("input", () => {
@@ -50,9 +29,7 @@ pizzaInput2.addEventListener("input", () => {
   let pizzaSize2 = +pizzaInput2.value
   calculatePizzaGain(pizzaSize1,pizzaSize2)
   updatePizzaDisplay(pizza2, pizzaInput2.value)
-  updateOutputColor(pizzaSize1,pizzaSize2)
-  // write your code here
-})
+
 
 // Task 1
 
