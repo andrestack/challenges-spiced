@@ -7,22 +7,19 @@ function renderStars(filledStars) {
   starContainer.innerHTML = "";
 
   //--v-- your code here --v--
-  for (let i = 1; i < 6; i++){
-    let image = document.createElement("img");
-    // image.setAttribute("src", "./assets/star-empty.svg");
-    starContainer.append(image);
-    
-    
-    if (filledStars === i[i]){
-      image.setAttribute("src", "./assets/star-empty.svg");
-      
-    } else {
-      
-      image.setAttribute("src","./assets/star-filled.svg");
-    }
+  starContainer.addEventListener("click", () => renderStars(5));
 
-   }
+  for (let i = 1; i < 6; i++) {
+    let image = document.createElement("img");
+    starContainer.append(image);
+
+    if (i > filledStars) {
+      image.setAttribute("src", "./assets/star-filled.svg");
+      // image.setAttribute("src", "./assets/star-empty.svg");
+    } else {
+      image.setAttribute("src", "./assets/star-empty.svg");
+      //   image.setAttribute("src", "./assets/star-filled.svg");
+    }
+  }
   //--^-- your code here --^--
 }
-
-renderStars(1);

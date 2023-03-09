@@ -19,16 +19,20 @@ async function checkIfApiIsAvailable() {
    * is okay and false if it is not.
    **/
   // --v-- write your code here --v--
-
-  fetch(apiStatusUrl).then((response) => {
-    if (response.ok) {
-      icon.textContent = "✅";
-    } else {
-      icon.innerText = "❌";
-    }
-  }).catch(error); {
-    icon.innerText= "❌"};
-//try
+  icon.textContent = "⏳";
+  fetch(apiStatusUrl)
+    .then((response) => {
+      if (response.ok) {
+        icon.textContent = "✅";
+      } else {
+        icon.innerText = "❌";
+      }
+    })
+    .catch(error);
+  {
+    icon.innerText = "❌";
+  }
+  //try
   // const response = await fetch(apiStatusUrl);
   // if (response.ok) {
   //   icon.textContent = "✅";
@@ -40,5 +44,4 @@ async function checkIfApiIsAvailable() {
 
 button.addEventListener("click", () => {
   checkIfApiIsAvailable();
-  icon.textContent = "⏳";
 });
