@@ -2,6 +2,16 @@ console.clear();
 
 const url = "https://swapi.dev/api/people";
 
-function fetchData() {}
+async function fetchData() {
+try {
+
+}
+
+
+}
+
+
+
+
 
 fetchData();
