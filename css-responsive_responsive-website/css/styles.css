@@ -157,7 +157,7 @@ fairly essential to completing this challenge. */
 /* Product Card + Backgrounds */
 
 .product-card {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -242,12 +242,54 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport 
 width, etc. */
 
-/* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media screen and (min-width: 900px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    align-items: flex-start;
+  }
+  .product-card {
+    width: 100%;
+  } 
+  }
+
+@media screen and (min-width: 1200px) {
+  .product-card.--forest{
+    grid-column: 1 / span 2;
+}
+.product-card.--desert{
+
+}
+}
+
+
+
+
+  
 
 /* Media Query Desktop */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+
+/* .main-content {
+  margin-top: var(--main-content-margin-top);
+  padding: var(--gap) 0 var(--gap) 0;
+  background: var(--navy-blue);
+}
+
+.intro-text {
+  color: var(--dark-beige);
+  font-size: var(--regular-text);
+  line-height: var(--regular-text-line-height);
+  width: 70%;
+}
+
+.card-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  flex-direction: column;
+} */
