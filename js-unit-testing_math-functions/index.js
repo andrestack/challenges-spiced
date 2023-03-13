@@ -2,6 +2,8 @@ export function add(a, b) {
   return a + b;
 }
 
+add(2,3)
+
 export function subtract(a, b) {
   return a - b;
 }
