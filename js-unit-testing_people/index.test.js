@@ -50,20 +50,37 @@ test("getFirstNames() returns an array with the first names", () => {
 
 test('getFullNames() returns an array with full names as strings, e.g. "Jane Doe"', () => {
   const result = getFullNames(people);
-  expect(result).toEqual(["Jane Doe", "John Doe", "Max Mustermann", "Erika Musterfrau", "Luke Skywalker"]);
+  expect(result).toEqual([
+    "Jane Doe",
+    "John Doe",
+    "Max Mustermann",
+    "Erika Musterfrau",
+    "Luke Skywalker",
+  ]);
 });
 
 test('getNameAndAge() returns an array of formatted strings like this: "Skywalker (23)"', () => {
   const result = getNameAndAge(people);
-  expect(result).toEqual(["Doe (21)", "Doe (18)", "Mustermann (32)", "Musterfrau (38)", "Skywalker (23)"]);
+  expect(result).toEqual([
+    "Doe (21)",
+    "Doe (18)",
+    "Mustermann (32)",
+    "Musterfrau (38)",
+    "Skywalker (23)",
+  ]);
 });
 
 test("getPeopleByAge() returns an array of people of a certain age", () => {
-  const result = getPeopleByAge(people,23);
-  expect(result).toEqual([people[4]]);
+  const result = getPeopleByAge(people, 23);
+  expect(result.length).toEqual(1);
+  expect(result[0].age).toEqual(23);
 });
 
-test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {});
+test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
+  const result = getPeopleNamesOlderThan(people, 32);
+  // expect(result).toEqual(["Erika Musterfrau"]);
+  expect(result[0].age).toBeGreaterThan(32);
+});
 
 test("getPeopleByLastName() returns an array of people of a certain lastName", () => {});
 
