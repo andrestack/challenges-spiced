@@ -1,9 +1,9 @@
 import "./styles.css";
 
 export default function App() {
-  return <Greeting name="Gimena" />;
+  return <Greeting name="Andreas" isCoach={["Klaus", "Marcell", "Gimena"]} />;
 }
 
-function Greeting({ name }) {
-  return <div>Hello,{name === "Gimena" ? " Coach" : name}!</div>;
+function Greeting({ name, isCoach }) {
+  return <div>Hello,{isCoach.includes(name) ? " Coach" : name}!</div>;
 }
