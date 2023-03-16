@@ -1,10 +1,12 @@
+import logo from "./logo.svg";
+
 export function EntryList(font, color, fontSize) {
   return (
     <>
       <p font={font} style={{ color, fontSize }}>
         Mar 27, 2022
       </p>
-      <img src="" alt="" />
+      <img src={logo} alt="Logo" />
 
       <h3>"That's life in the city"</h3>
 
