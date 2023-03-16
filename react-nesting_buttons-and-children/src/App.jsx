@@ -6,13 +6,12 @@ export default function App() {
     <main>
       <Button> Hello Friend </Button>
       <Button> Goodbye Friend</Button>
-      <Button> Lets go!</Button>
-
+      <Button> Let&apos;s go!</Button>
     </main>
   );
 }
 
-function Button({children}) {
+function Button({ children }) {
   return (
     <button className="button" type="button">
       {children}
