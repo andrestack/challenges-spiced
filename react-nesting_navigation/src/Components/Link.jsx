@@ -1,3 +1,18 @@
-export function Link({children, href}){
-    return <a className="navigation__link" href={href}>{children}</a>
+export function Link({ children, href }) {
+  return (
+    <>
+      <a className="navigation__link" href={href}>
+        {children}
+      </a>
+      <a className="navigation__link" href={href}>
+        {children}
+      </a>
+      <a className="navigation__link" href={href}>
+        {children}
+      </a>
+      <a className="navigation__link" href={href}>
+        {children}
+      </a>
+    </>
+  );
 }
