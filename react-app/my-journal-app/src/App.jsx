@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { Header } from "./Components/Header";
 import Footer from "./Components/Footer";
 import { Main } from "./Components/Main/EntryForm/Main";
@@ -19,13 +19,17 @@ function App() {
         New Entry
         <Input width="30px" />
         <TextArea />
-        <EntryButton text="Create" fontSize="30px" color="#252629" backgroundColor="#ff4a11" />
+        <EntryButton
+          text="Create"
+          fontSize="30px"
+          color="#252629"
+          backgroundColor="#ff4a11"
+        />
         <br />
-        <TabBars/>
-        <EntryList font="Helvetica" color="#252629" fontSize="300px"/>
-        <EntryList font="Helvetica" color="#252629" fontSize="300px"/>
-        <EntryList font="Helvetica" color="#252629" fontSize="300px"/>
-        
+        <TabBars />
+        <EntryList font="Helvetica" color="#252629" fontSize="300px" />
+        <EntryList font="Helvetica" color="#252629" fontSize="300px" />
+        <EntryList font="Helvetica" color="#252629" fontSize="300px" />
       </Main>
       <Footer color="white" />
     </>
