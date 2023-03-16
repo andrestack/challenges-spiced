@@ -4,7 +4,6 @@ export function EntryList(font, color, fontSize) {
       <p font={font} style={{ color, fontSize }}>
         Mar 27, 2022
       </p>
-      
 
       <h3>"That's life in the city"</h3>
 

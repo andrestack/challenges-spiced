@@ -1,12 +1,11 @@
 // import logo from "./logo.svg";
 import { Header } from "./Components/Header";
 import Footer from "./Components/Footer";
-import { Main } from "./Components/Main/EntryForm/Main";
-import { Input } from "./Components/Main/EntryForm/Input";
-import { TextArea } from "./Components/Main/EntryForm/TextArea";
+import { Main } from "./Components/Main";
 import { EntryButton } from "./Components/Main/EntryForm/Button";
-import { TabBars } from "./Components/Main/EntrySection/TabBars/TabBar1";
-import { EntryList } from "./Components/Main/EntryList";
+import { TabBars } from "./Components/Main/EntrySection/TabBar1";
+import { EntryList } from "./Components/Main/EntrySection/EntryList";
+import { FormArea } from "./Components/Main/EntryForm/FormArea";
 
 import "./App.css";
 import "./colors.css";
@@ -16,18 +15,19 @@ function App() {
     <>
       <Header />
       <Main font="Helvetica" color="#252629" fontSize="12px">
-        New Entry
-        <Input width="30px" />
-        <TextArea />
+        <h2>New Entry</h2>
+
+        <FormArea />
         <EntryButton
           text="Create"
-          fontSize="30px"
+          fontSize="20px"
           color="#252629"
           backgroundColor="#ff4a11"
+          position="center"
         />
         <br />
         <TabBars />
-        <EntryList font="Helvetica" color="#252629" fontSize="300px" />
+        <EntryList font="Hel" color="#252629" fontSize="300px" />
         <EntryList font="Helvetica" color="#252629" fontSize="300px" />
         <EntryList font="Helvetica" color="#252629" fontSize="300px" />
       </Main>
