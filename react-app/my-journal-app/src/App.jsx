@@ -5,6 +5,8 @@ import { Main } from "./Components/Main/EntryForm/Main";
 import { Input } from "./Components/Main/EntryForm/Input";
 import { TextArea } from "./Components/Main/EntryForm/TextArea";
 import { EntryButton } from "./Components/Main/EntryForm/Button";
+import { TabBars } from "./Components/Main/EntrySection/TabBars/TabBar1";
+import { EntryList } from "./Components/Main/EntryList";
 
 import "./App.css";
 import "./colors.css";
@@ -17,7 +19,13 @@ function App() {
         New Entry
         <Input width="30px" />
         <TextArea />
-        <EntryButton text="Create" fontSize="300px" />
+        <EntryButton text="Create" fontSize="30px" color="#252629" backgroundColor="#ff4a11" />
+        <br />
+        <TabBars/>
+        <EntryList font="Helvetica" color="#252629" fontSize="300px"/>
+        <EntryList font="Helvetica" color="#252629" fontSize="300px"/>
+        <EntryList font="Helvetica" color="#252629" fontSize="300px"/>
+        
       </Main>
       <Footer color="white" />
     </>
