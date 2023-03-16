@@ -1,8 +1,10 @@
 export function TabBars() {
   return (
     <>
-      <span>All Entries 3️⃣ </span>
-      <span>Favourites 0️⃣</span>
+    <div className="counters">
+      <p>All Entries 3️⃣ </p>
+      <p>Favourites 0️⃣</p>
+      </div>
     </>
   );
 }

@@ -26,7 +26,7 @@ function App() {
           position="center"
         />
         <br />
-        <TabBars />
+        <TabBars className="Tabs"/>
         <EntryList font="Hel" color="#252629" fontSize="300px" />
         <EntryList font="Helvetica" color="#252629" fontSize="300px" />
         <EntryList font="Helvetica" color="#252629" fontSize="300px" />

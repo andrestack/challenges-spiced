@@ -5,7 +5,12 @@ export function FormArea({ width, height, font, color, fontSize }) {
         Motto
       </label>
       <br />
-      <input className="input__bars" type="text" width={width} height={height} />
+      <input
+        className="input__bars"
+        type="text"
+        width={width}
+        height={height}
+      />
       <br />
       <label htmlFor="" font={font} color={color} fontSize={fontSize}>
         Notes
@@ -13,7 +18,5 @@ export function FormArea({ width, height, font, color, fontSize }) {
       <br />
       <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
     </form>
-    
   );
-  
 }

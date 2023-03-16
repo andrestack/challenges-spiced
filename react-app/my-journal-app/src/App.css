@@ -5,9 +5,11 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
-h1, h2, h3, .button{
-text-align: center;
+h1,
+h2,
+h3 {
+  text-align: center;
+  gap: 5px;
 }
 
 .main__body {
@@ -16,11 +18,30 @@ text-align: center;
 
 form {
   text-align: center;
-  
 }
 
+button {
+  border-radius: 10px 0px 10px 0px;
+}
+.button__box {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
 .input__bars {
   width: fit-content;
+}
+
+.counters{
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+}
+
+span {
+  text-align: center;
+  border: solid 2px orange;
+  align-items: center;
 }
 
 /* FROM THE REACT LAUNCH PACK
