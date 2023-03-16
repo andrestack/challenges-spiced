@@ -4,7 +4,8 @@ export function Input({ width, height, font, color, fontSize }) {
       <label htmlFor="Motto" font={font} color={color} fontSize={fontSize}>
         Motto
       </label>
-      <input type="text" width={width} height={height} />
+      <br />
+      <input type="text" cols="30" width={width} height={height} />
     </form>
   );
 }

@@ -3,6 +3,7 @@ import { Header } from "./Components/Header";
 import Footer from "./Components/Footer";
 import { Main } from "./Components/Main/EntryForm/Main";
 import { Input } from "./Components/Main/EntryForm/Input";
+import { TextArea } from "./Components/Main/EntryForm/TextArea";
 
 import "./App.css";
 import "./colors.css";
@@ -11,9 +12,10 @@ function App() {
   return (
     <>
       <Header />
-      <Main>
+      <Main font="Helvetica" color="#252629" fontSize="12px">
         New Entry
-        <Input width="50px" height="50px" />
+        <Input width="30px"/>
+        <TextArea/>
       </Main>
       <Footer color="white" />
     </>
