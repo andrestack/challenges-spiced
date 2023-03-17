@@ -18,16 +18,13 @@ function App() {
         <h2>New Entry</h2>
 
         <FormArea />
-        <EntryButton
+        <EntryButton className="Button"
           text="Create"
-          fontSize="20px"
-          color="#252629"
-          backgroundColor="#ff4a11"
-          position="center"
+       
         />
         <br />
-        <TabBars className="Tabs"/>
-        <EntryList font="Hel" color="#252629" fontSize="300px" />
+        <TabBars className="Tabs" />
+        <EntryList font="Helvetica" color="#252629" fontSize="300px" />
         <EntryList font="Helvetica" color="#252629" fontSize="300px" />
         <EntryList font="Helvetica" color="#252629" fontSize="300px" />
       </Main>

@@ -12,36 +12,46 @@ h3 {
   gap: 5px;
 }
 
-.main__body {
-  margin: auto;
+body {
+  margin: 0;
 }
 
-form {
+.Form {
   text-align: center;
+  width: auto;
 }
 
-button {
+Button {
   border-radius: 10px 0px 10px 0px;
+  font-size: 30px;
+  color: #252629;
+  background-color: #ff4a11;
+  border-radius: 10px 0px 10px 0px;
+  color: var(--color-foam);
 }
+/* text="Create"
+          fontSize="20px"
+          color="#252629"
+          backgroundColor="#ff4a11"
+          borderRadius="10px 0px 10px 0px" */
+
 .button__box {
   display: flex;
   justify-content: center;
   padding: 2px;
 }
 .input__bars {
-  width: fit-content;
+  width: 500px;
 }
 
-.counters{
+.TextArea {
+  width: 500px;
+}
+
+.counters {
   display: flex;
   align-content: space-around;
   justify-content: center;
-}
-
-span {
-  text-align: center;
-  border: solid 2px orange;
-  align-items: center;
 }
 
 /* FROM THE REACT LAUNCH PACK
