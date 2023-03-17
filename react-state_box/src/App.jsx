@@ -19,7 +19,4 @@ export default function App() {
     </main>
   );
 
-  function Text() {
-    return <h3>Deactivate</h3>;
-  }
 }
