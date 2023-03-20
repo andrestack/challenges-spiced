@@ -1,11 +1,26 @@
-import { useState } from "react";
+import App from "../App";
 
-export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+export default function Form({onCreateUser}) {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
+    
+    //NICER CODE 
+    // const form = event.target;
+    // const name = form.element.name.value;
+    // const email = form.element.email.value;
+    // onCreateUser(name, email)
+    
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    onCreateUser(data.name, data.email)
+
+ 
+
+ event.target.reset();
+  
   }
 
   return (
