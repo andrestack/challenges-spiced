@@ -2,9 +2,16 @@ import React, { useState } from "react";
 import Counter from "./components/Counter";
 import "./styles.css";
 
-export default function App({people}) {
+export default function App() {
+const [people, setPeople] = useState(0)
 
-  
+function addPeople(){
+  setPeople(people +1);
+}
+
+function subPeople(){
+  setPeople(people - 1);
+}
 
 
   
@@ -13,8 +20,8 @@ export default function App({people}) {
   return (
     <div className="container">
       <h1>Place a Table Reservation</h1>
-      <Counter />
-      <p>You are going to reserve a table for {} people.</p>
+      <Counter addPeople={addPeople} subPeople={subPeople} />
+      <p>You are going to reserve a table for {people} people.</p>
     </div>
   );
   
