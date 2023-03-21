@@ -15,7 +15,7 @@ export default function PokemonList() {
           console.log(error);
         }
 
-        loadPokemon();
+        // loadPokemon();
       },
     []
   );
