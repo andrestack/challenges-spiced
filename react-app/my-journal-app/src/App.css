@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  gap: 5px;
+}
+
+body {
+  margin: 0;
+}
+
+.Form {
+  text-align: center;
+  width: auto;
+}
+
+Button {
+  border-radius: 10px 0px 10px 0px;
+  font-size: 30px;
+  color: #252629;
+  background-color: #ff4a11;
+  border-radius: 10px 0px 10px 0px;
+  color: var(--color-foam);
+}
+/* text="Create"
+          fontSize="20px"
+          color="#252629"
+          backgroundColor="#ff4a11"
+          borderRadius="10px 0px 10px 0px" */
+
+.button__box {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+}
+.input__bars {
+  width: 500px;
+}
+
+.TextArea {
+  width: 500px;
+}
+
+.counters {
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+}
+
+/* FROM THE REACT LAUNCH PACK
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
