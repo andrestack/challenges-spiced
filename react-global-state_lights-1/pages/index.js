@@ -3,11 +3,12 @@ import useLightsStore from "../store/lighhtsStore";
 
 export default function HomePage() {
   const lights = useLightsStore (state => state.lights)
+  const numberOfTurnedOnLights = lights.filter(light => light.isOn).length
   
   return (
     <div>
       <h1>Home</h1>
-      <p>{lights.length} are on.</p>
+      <p>{numberOfTurnedOnLights} light(s) are on.</p>
       <p>
         <Link href="/lights">All lights →</Link>
       </p>
