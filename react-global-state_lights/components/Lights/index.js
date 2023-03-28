@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Light from "../Light";
 
+
 const StyledLights = styled.ul`
   list-style-type: none;
   display: flex;
@@ -11,33 +12,24 @@ const StyledLights = styled.ul`
   justify-content: center;
 `;
 
-export default function Lights() {
+// {volumes.map((volume) => {
+//   return (
+//     <li key={volume.title}>
+//       <Link href={`/volumes/${volume.slug}`}>{volume.title} </Link>
+//     </li>
+//   );
+// })}
+
+export default function Lights({ rooms, handleToggle}) {
   return (
-    <StyledLights>
-      <li>
-        <Light name="Living Room" />
-      </li>
-      <li>
-        <Light name="Kitchen" />
-      </li>
-      <li>
-        <Light name="Bedroom" />
-      </li>
-      <li>
-        <Light name="Bathroom" />
-      </li>
-      <li>
-        <Light name="Garage" />
-      </li>
-      <li>
-        <Light name="Porch" />
-      </li>
-      <li>
-        <Light name="Garden" />
-      </li>
-      <li>
-        <Light name="Office" />
-      </li>
+    <StyledLights rooms={rooms}>
+      {rooms.map((room) => {
+        return (
+          <li key={room.id}>
+            <Light name={room.name} isOn={isOn} handleToggle={()=> handleToggle(room.id)}/>
+          </li>
+        );
+      })}
     </StyledLights>
   );
 }

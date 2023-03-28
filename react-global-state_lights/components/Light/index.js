@@ -1,18 +1,16 @@
-import { useState } from "react";
+
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
 
-export default function Light({ name }) {
-  const [isOn, setIsOn] = useState(false);
+export default function Light({ rooms, name, isOn, handleToggle }) {
+  // const [isOn, setIsOn] = useState(false);
 
-  function handleToggle() {
-    setIsOn((isOn) => !isOn);
-  }
-
+  
   return (
     <LightButton
       type="button"
-      onClick={() => {
-        handleToggle();
+      name={name}
+      onToggle={() => {
+        handleToggle(rooms.id);
       }}
       isOn={isOn}
     >
