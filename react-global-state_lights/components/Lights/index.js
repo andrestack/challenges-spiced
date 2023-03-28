@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Light from "../Light";
 
-
 const StyledLights = styled.ul`
   list-style-type: none;
   display: flex;
@@ -20,13 +19,17 @@ const StyledLights = styled.ul`
 //   );
 // })}
 
-export default function Lights({ rooms, handleToggle}) {
+export default function Lights({ rooms, handleToggle }) {
   return (
     <StyledLights rooms={rooms}>
       {rooms.map((room) => {
         return (
           <li key={room.id}>
-            <Light name={room.name} isOn={isOn} handleToggle={()=> handleToggle(room.id)}/>
+            <Light
+              name={room.name}
+              isOn={room.isOn}
+              handleToggle={() => handleToggle(room.id)}
+            />
           </li>
         );
       })}

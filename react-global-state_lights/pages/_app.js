@@ -47,11 +47,11 @@ const inititalRooms = [
 
 export default function App({ Component, pageProps }) {
   const [rooms, setRooms] = useState(inititalRooms);
-  
 
   function handleToggle(id) {
-    setRooms(rooms.map((room) => (room.id === id ? isOn : !isOn)));
-    console.log(isOn);
+    setRooms(
+      rooms.map((room) => (room.id === id ? { ...rooms, isOn: !isOn } : room))
+    );
   }
 
   return (

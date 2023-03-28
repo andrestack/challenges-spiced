@@ -1,10 +1,13 @@
 import Link from "../components/Link";
+import useLightsStore from "../store/lighhtsStore";
 
 export default function HomePage() {
+  const lights = useLightsStore (state => state.lights)
+  
   return (
     <div>
       <h1>Home</h1>
-      <p>?? light(s) are on.</p>
+      <p>{lights.length} are on.</p>
       <p>
         <Link href="/lights">All lights →</Link>
       </p>
