@@ -4,6 +4,7 @@ import {
   ControlsDisplay,
 } from "./Controls.styled";
 
+
 export default function Controls({ longitude, latitude, onRefresh }) {
   return (
     <ControlsContainer>
