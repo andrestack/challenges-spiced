@@ -22,6 +22,7 @@ export default function Product() {
         Price: {data.price} {data.currency}
       </p>
       <p>{data.reviews.length} review(s)</p>
+
       <Comments reviews={data.reviews} />
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
