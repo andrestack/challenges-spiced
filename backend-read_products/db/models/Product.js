@@ -8,7 +8,6 @@ const productSchema = new Schema({
     description: String,
     price: Number,
     currency: String,
-    required: true,
   },
 });
 
