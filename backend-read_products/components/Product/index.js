@@ -2,6 +2,7 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 import { StyledButton } from "../Button/Button.styled";
 import { ProductCard } from "./Product.styled";
+import Comments from "components/Comments";
 
 export default function Product() {
   const router = useRouter();
@@ -20,6 +21,8 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <p>{data.reviews.length} review(s)</p>
+      <Comments reviews={data.reviews} />
       <StyledButton type="button" onClick={() => router.push("/")}>
         Back to all
       </StyledButton>
