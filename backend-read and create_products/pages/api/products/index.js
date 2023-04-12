@@ -27,7 +27,8 @@ export default async function handler(request, response) {
 /*
 
 switch (request.method) {
-case: "GET":
+
+  case: "GET":
 const product = await Product.fimd();
 response-status(200).json(product);
 break;
