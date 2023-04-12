@@ -26,24 +26,28 @@ export default async function handler(request, response) {
 }
 /*
 
-switch (request.method === "POST") {
-case:
+switch (request.method) {
+case: "GET":
+const product = await Product.fimd();
+response-status(200).json(product);
+break;
+
+case: "POST":
+
 try {
   const productData= request.body;
   const product = new Product(productData);
-  await product.save()
-
-  response.status(201).json({status: "Product created."})
+  await product.save((err, data) => {
+    console.log(data);
+  })
+response.status(201).json({status: "Product created."})
 } catch (error) {
   console.log(error);
   response.status(400),json({error: error.message})
   
 }
-break
-case (request.method === "GET"):
-const product = await Product.find();
-    return response.status(200).json(product);
+break; 
 default:
-  response.status(405).json({ message: "Method not allowed" });
+  response.status(400).json({ error: "Method ${method} not allowed" });
 
 } */
