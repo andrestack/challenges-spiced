@@ -2,10 +2,11 @@ import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSRW from "swr";
 
-export default function ProductForm() {
+export default function ProductForm({ onSubmit, header }) {
   const products = useSRW("/api/products");
 
   async function handleSubmit(event) {
+    onSubmit(event);
     event.preventDefault();
 
     const formData = new FormData(event.target);
@@ -54,3 +55,4 @@ export default function ProductForm() {
     </StyledForm>
   );
 }
+//defaultValue={product?.name}
