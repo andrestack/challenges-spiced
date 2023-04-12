@@ -7,7 +7,8 @@ export default async function handler(request, response) {
     try {
       const productData = request.body;
       const product = new Product(productData);
-      await product.save();
+      await product.save((err, data))
+      console.log(data);
 
       response.status(201).json({ status: "Product created." });
     } catch (error) {
